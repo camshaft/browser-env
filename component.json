@@ -1,0 +1,16 @@
+{
+  "name": "browser-env",
+  "repo": "CamShaft/browser-env",
+  "description": "Share process.env variables with the browser",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/cookie": "*",
+    "component/json": "*"
+  },
+  "development": {},
+  "scripts": [
+    "browser-env.js"
+  ],
+  "license": "MIT"
+}
