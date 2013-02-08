@@ -10,10 +10,12 @@ var cookie = require("cookie")
 module.exports = function(name) {
   var env = {};
   try {
-    env = json.parse(cookie("browser-env"));
+    env = json.parse(cookie(module.exports.__cookie));
   }
   catch (e) {
     // do nothing
   }
   return name ? env[name] : env;
 };
+
+module.exports.__cookie = "browser-env";

@@ -1,6 +1,6 @@
 {
   "name": "browser-env",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Share process.env variables with the browser",
   "main": "index.js",
   "scripts": {
@@ -12,5 +12,9 @@
   },
   "author": "Cameron Bytheway <cameron@theflokk.com>",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "startup": "~0.1.9",
+    "express": "~3.1.0"
+  }
 }
