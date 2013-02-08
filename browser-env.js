@@ -15,5 +15,5 @@ module.exports = function(name) {
   catch (e) {
     // do nothing
   }
-  return env[name];
+  return name ? env[name] : env;
 };
