@@ -4,10 +4,10 @@
   <script type="text/javascript" src="build.js"></script>
 </head>
 <body>
+  <div id="test"></div>
 
 </body>
 <script type="text/javascript">
-  var env = require('browser-env');
-  document.body.innerHTML = '<pre>'+JSON.stringify(env())+'</pre>';
+  document.getElementById("test").innerHTML = '<pre>'+JSON.stringify(env())+'</pre>';
 </script>
 </html>
