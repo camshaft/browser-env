@@ -6,6 +6,7 @@
   "keywords": [],
   "dependencies": {
     "component/cookie": "*",
+    "component/json-fallback": "*",
     "component/json": "*"
   },
   "development": {},
