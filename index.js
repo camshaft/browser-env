@@ -1,6 +1,7 @@
 /**
  * Module dependencies
  */
+var merge = require("fmerge");
 
 /**
  * Expose `process.env` variables to the browser
@@ -37,15 +38,17 @@ module.exports = function(vars, options, hook) {
       });
     }
 
-    hook(req, browser, function(err, browserVars) {
+    hook(req, browser, function(err, browserVars, cookieOptions) {
       if(err) return next(err);
+
+      if(!cookieOptions) cookieOptions = {};
 
       var cookie = JSON.stringify(browserVars || browser);
 
       // If it's the same, we don't need to set it again
       if (req.cookies && req.cookies[options.name] == cookie) return next();
 
-      res.cookie(options.name, cookie, options);
+      res.cookie(options.name, cookie, merge(options, cookieOptions));
       next();
     });
   };

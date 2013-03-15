@@ -16,5 +16,8 @@
   "devDependencies": {
     "startup": "~0.1.9",
     "express": "~3.1.0"
+  },
+  "dependencies": {
+    "fmerge": "~1.0.0"
   }
 }
