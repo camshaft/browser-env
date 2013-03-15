@@ -19,6 +19,8 @@ module.exports = function(vars, options, hook) {
 
   return function browserEnv(req, res, next) {
     var browser = {};
+
+    // Set the exposed variables
     vars.forEach(function(env) {
       if(!env) return;
       browser[env] = process.env[env];
@@ -33,9 +35,7 @@ module.exports = function(vars, options, hook) {
       catch (e) {
         cookies = {};
       }
-      Object.keys(cookies).forEach(function(key) {
-        browser[key] = cookies[key];
-      });
+      browser = merge(browser, cookies);
     }
 
     hook(req, browser, function(err, browserVars, cookieOptions) {
