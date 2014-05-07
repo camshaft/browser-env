@@ -3,6 +3,11 @@ browser-env
 
 Share process.env variables with the browser
 
+DEPRECATED
+----------
+
+This is no longer recommended. Use [envs](https://github.com/camshaft/envs) instead.
+
 What?
 -----
 
